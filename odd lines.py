@@ -1,8 +1,9 @@
 file1 = open("file.txt", "r")
 file2 = open("fileupdated.txt", "w")
-
+count = 0 
 for line in file1.readlines():
-    if line.startswith("Rayed"):
+    count += 1 
+    if count%2 != 0:
         print(line)
         file2.write(line)
 file2.close()
